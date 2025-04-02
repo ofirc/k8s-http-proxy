@@ -3,6 +3,11 @@ A simple [tinyproxy](https://tinyproxy.github.io/) blueprint to forward HTTP(S) 
 This kind of proxy is also called an HTTP CONNECT proxy, or just an HTTP(s) forward proxy. 
 It does not intercept the traffic and instead sets up a tunnel between the client and the target.
 
+# Related projects
+* [Man-in-the-middle TLS inspection proxy](https://github.com/ofirc/k8s-sniff-https) - useful for deep packet inspection and reverse engineering HTTPS encrypted traffic
+
+* [mTLS Proxy with client credentials](https://github.com/ofirc/go-mtls-proxy) - useful in zero-trust settings
+
 # TL;DR
 Run the following:
 ```bash
@@ -46,11 +51,6 @@ Optional, tear down the cluster:
 ```bash
 kind delete cluster --name test-proxy
 ```
-
-# Related projects
-* [Man-in-the-middle TLS inspection proxy](https://github.com/ofirc/k8s-sniff-https) - useful for deep packet inspection and reverse engineering HTTPS encrypted traffic
-
-* [mTLS Proxy with client credentials](https://github.com/ofirc/go-mtls-proxy) - useful in zero-trust settings
 
 # Use case
 In enterprise settings, all outbound (egress) traffic typically goes through a proxy server of some kind.
